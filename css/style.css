@@ -229,3 +229,77 @@ p {
         height: calc(100% + 20px); /* Adjust height for animation */
     }
 }
+/* Basic styling for sections */
+.team, .history {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Team section styling */
+.team {
+    background-color: #f9f9f9; /* Light gray background */
+}
+
+/* Team heading and description */
+#team, #team-description {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Flexbox for team members */
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Team member image */
+.team-member img {
+    width: 150px; /* Adjust size as needed */
+    height: 150px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .team {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .team-member {
+        flex: 0 1 30%; /* Adjust width of each member */
+        max-width: 300px; /* Limit maximum width */
+        margin: 0 15px; /* Add horizontal margin for spacing */
+    }
+}
+
+@media (max-width: 767px) {
+    .team-member {
+        flex: 0 1 100%; /* Full width on smaller screens */
+        max-width: none; /* Remove maximum width */
+    }
+}
+
+/* Additional styling for history section */
+.history {
+    background-color: #ececec; /* Lighter gray background */
+    color: #666;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* History heading */
+#history {
+    margin-bottom: 20px;
+}
+
+/* Center history content */
+.history-content {
+    max-width: 800px; /* Limit width for centered content */
+    margin: 0 auto; /* Center align content */
+}
