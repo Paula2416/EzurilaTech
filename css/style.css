@@ -303,3 +303,82 @@ p {
     max-width: 800px; /* Limit width for centered content */
     margin: 0 auto; /* Center align content */
 }
+/* Basic styling for section */
+.pricing {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f0f0f0; /* Light gray background */
+    text-align: center;
+}
+
+/* Individual pricing plan styling */
+.pricing-plan {
+    max-width: 300px; /* Limit width of each plan */
+    padding: 20px;
+    background-color: #fff; /* White background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease-in-out; /* Smooth transform animation */
+}
+
+/* Plan title */
+.plan-title {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Plan cost */
+.plan-cost {
+    font-size: 20px;
+    color: #007bff; /* Blue color for cost */
+    margin-bottom: 15px;
+}
+
+.plan-cost span {
+    font-size: 14px;
+    color: #555; /* Gray color for 'Monthly' */
+}
+
+/* Plan features list */
+.plan-features {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 15px;
+}
+
+.plan-features li {
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .pricing {
+        flex-direction: column; /* Stack plans vertically on smaller screens */
+    }
+
+    .pricing-plan {
+        margin-bottom: 30px; /* Add spacing between plans */
+    }
+}
+
+/* Image styling for each plan */
+.image-behind {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    opacity: 0.5; /* Adjust opacity as needed */
+    transition: transform 0.3s ease-in-out; /* Smooth transform animation */
+}
+
+/* Specific animations for images */
+.image-behind.plan-1 {
+    transform: translateX(-20px); /* Move left for plan 1 */
+}
+
+.image-behind.plan-2 {
+    transform: translateX(20px); /* Move right for plan 2 */
+}
