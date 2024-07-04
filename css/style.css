@@ -148,3 +148,84 @@ header nav .nav-list a:hover {
         width: 80%;
     }
 }
+/* Basic styling for the section */
+.about {
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 50px 20px;
+    text-align: center;
+    position: relative; /* Ensure relative positioning for absolute elements */
+}
+
+/* Styling for the background container */
+.about-background {
+    position: relative; /* Ensure relative positioning for absolute elements */
+    z-index: 1; /* Ensure text is on top of background */
+    max-width: 800px; /* Limit width of content */
+    margin: 0 auto; /* Center align content */
+}
+
+/* Heading styles */
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+h3, h4 {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Paragraph styles */
+p {
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Animation for background image */
+.about-background::before {
+    content: '';
+    position: absolute;
+    top: -50px; /* Adjust as needed */
+    left: 0;
+    width: 100%;
+    height: calc(100% + 50px); /* Adjust height for animation */
+    background-image: url('../assets/images/about.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Behind the text */
+    animation: animateBackground 30s linear infinite;
+}
+
+/* Keyframes for background animation */
+@keyframes animateBackground {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2em;
+    }
+    p {
+        font-size: 16px;
+    }
+    .about-background::before {
+        height: calc(100% + 30px); /* Adjust height for animation */
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.8em;
+    }
+    .about-background::before {
+        height: calc(100% + 20px); /* Adjust height for animation */
+    }
+}
